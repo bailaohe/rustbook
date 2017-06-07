@@ -1,0 +1,6 @@
+[package]
+name = "otherdemo"
+version = "0.1.0"
+authors = ["baihe <baihe@xiaomai5.com>"]
+
+[dependencies]
