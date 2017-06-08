@@ -5,5 +5,9 @@ fn main() {
 
     let data = "initial contents";
 
-    let s: String = data.to_string();
+    let mut s: String = data.to_string();
+
+    s.push_str("bar");
+
+    s.push('1')
 }
