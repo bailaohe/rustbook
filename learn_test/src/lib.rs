@@ -24,8 +24,10 @@ struct Guess {
 
 impl Guess {
     pub fn new(value: u32) -> Guess {
-        if value < 1 || value > 100 {
-            panic!("Guess value must be between 1 and 100, got {}.", value);
+        if value < 1 {
+            panic!("Guess value must be greater than or equal to 1, got {}.", value);
+        } else if value > 10 {
+            panic!("Guess value must be less than or equal to 100, got {}.", value);
         }
 
         Guess {
@@ -66,8 +68,14 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "Guess value must be less than or equal to 100")]
     fn greater_than_100() {
         Guess::new(200);
+    }
+
+    #[test]
+    #[ignore]
+    fn expensive_test() {
+        // code that takes an hour to run
     }
 }
