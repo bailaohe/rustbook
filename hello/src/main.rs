@@ -2,7 +2,6 @@ use std::io::prelude::*;
 use std::net::TcpListener;
 use std::net::TcpStream;
 use std::fs::File;
-use std::thread;
 
 extern crate hello;
 use hello::ThreadPool;

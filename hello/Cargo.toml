@@ -1,6 +1,11 @@
 [package]
-name = "hello"
+name = "demo"
 version = "0.1.0"
 authors = ["baihe <baihe@xiaomai5.com>"]
+
+
+[lib]
+name = "hello"
+path = "src/lib.rs"
 
 [dependencies]
